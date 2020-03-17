@@ -175,6 +175,26 @@ export default function MiniDrawer() {
               </ListItem>
             ))}
           </Link>
+          <Link to="/product">
+            {["Product"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </Link>
+          <Link to="/price">
+            {["Price"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </Link>
         </List>
       </Drawer>
       <main className={classes.content}>
